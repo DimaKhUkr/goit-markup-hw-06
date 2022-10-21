@@ -891,13 +891,16 @@ img {
   border: 2px solid var(--tittle-text-color);
   border-radius: 4px;
   fill: var(--background-color);
-  transition: border-width 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: border-width 100ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 100ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-agreement input:checked + label .icon-form {
   background-color: var(--alt-text-color);
   border-width: 0;
+  border-color: var(--alt-text-color);
+}
+.form-agreement input:focus + label .icon-form {
   border-color: var(--alt-text-color);
 }
 
