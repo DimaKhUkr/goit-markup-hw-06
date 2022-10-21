@@ -855,13 +855,50 @@ img {
   justify-content: center;
   text-align: center;
 }
+.form-agreement > input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 .form-agreement label {
+  display: flex;
+  align-items: center;
   line-height: 1.71;
-  margin-left: 7px;
 }
+
 .form-agreement a {
   color: var(--alt-text-color);
+  margin-left: 5px;
+}
+/* .form-agreement use {
+  width: 16px;
+  height: 15px;
+} */
+
+.form-agreement .icon-form {
+  display: block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--tittle-text-color);
+  border-radius: 4px;
+  fill: var(--background-color);
+  transition: border-width 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-agreement input:checked + label .icon-form {
+  background-color: var(--alt-text-color);
+  border-width: 0;
+  border-color: var(--alt-text-color);
 }
 
 .modal-send {
